@@ -1,10 +1,9 @@
 from taktivitypub.base import APObject
+from taktivitypub.constants import ObjectType
+from taktivitypub.types import IRI
 
 
 class Actor(APObject):
-    inbox: str
-    outbox: str
-
-    @classmethod
-    def make_test(cls):
-        return cls(id="a", type="b", inbox="x", outbox="y")
+    type: ObjectType = ObjectType.Actor
+    inbox: IRI
+    outbox: IRI

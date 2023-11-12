@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    {
+      "atomUri": "ostatus:atomUri",
+      "blurhash": "toot:blurhash",
+      "conversation": "ostatus:conversation",
+      "focalPoint": {
+        "@container": "@list",
+        "@id": "toot:focalPoint"
+      },
+      "inReplyToAtomUri": "ostatus:inReplyToAtomUri",
+      "ostatus": "http://ostatus.org#",
+      "sensitive": "as:sensitive",
+      "toot": "http://joinmastodon.org/ns#",
+      "votersCount": "toot:votersCount"
+    }
+  ],
+  "atomUri": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049",
+  "attachment": [
+    {
+      "blurhash": "UPFFZ}kCaxxt01j[WBWB9ZaeofWB_2WUNGbH",
+      "height": 2839,
+      "mediaType": "image/jpeg",
+      "name": "A 2U rackmount server with its top cover off. Various electronics are visible inside, and the front drive bays have two caddies and ten empty spaces.",
+      "type": "Document",
+      "url": "https://cdn.masto.host/fediaeracodeorg/media_attachments/files/111/354/062/557/131/802/original/cdc8d0e5a12e4994.jpg",
+      "width": 2922
+    }
+  ],
+  "attributedTo": "https://fedi.aeracode.org/users/andrew",
+  "cc": [
+    "https://fedi.aeracode.org/users/andrew/followers"
+  ],
+  "content": "<p>For a mere $500 on eBay I have acquired a Dell R730XD to replace my current Synology NAS with a TrueNAS install, plus to become a dev VM host.</p><p>28 cores across two Xeon processors, 128GB of ECC RAM (I really wanted ECC since we get more bit-flipping cosmic rays at altitude!) and 14 disk bays so I can add my existing ones plus room to spare. It is, uh, a significant power upgrade.</p>",
+  "contentMap": {
+    "en": "<p>For a mere $500 on eBay I have acquired a Dell R730XD to replace my current Synology NAS with a TrueNAS install, plus to become a dev VM host.</p><p>28 cores across two Xeon processors, 128GB of ECC RAM (I really wanted ECC since we get more bit-flipping cosmic rays at altitude!) and 14 disk bays so I can add my existing ones plus room to spare. It is, uh, a significant power upgrade.</p>"
+  },
+  "conversation": "tag:aeracode.org,2023-11-04:objectId=314803:objectType=Conversation",
+  "id": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049",
+  "inReplyTo": null,
+  "inReplyToAtomUri": null,
+  "published": "2023-11-04T20:03:25Z",
+  "replies": {
+    "first": {
+      "items": [],
+      "next": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049/replies?only_other_accounts=true&page=true",
+      "partOf": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049/replies",
+      "type": "CollectionPage"
+    },
+    "id": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049/replies",
+    "type": "Collection"
+  },
+  "sensitive": false,
+  "summary": null,
+  "tag": [],
+  "to": "https://www.w3.org/ns/activitystreams#Public",
+  "type": "Note",
+  "url": "https://fedi.aeracode.org/@andrew/111354066078688049"
+}

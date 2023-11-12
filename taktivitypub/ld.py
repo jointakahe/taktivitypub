@@ -1,9 +1,6 @@
-import datetime
 import logging
-import os
 import urllib.parse as urllib_parse
 
-from dateutil import parser
 from pyld import jsonld
 
 schemas = {
@@ -695,16 +692,3 @@ def get_str_or_id(value: str | dict | None, key: str = "id") -> str | None:
     elif isinstance(value, dict):
         return value.get(key)
     return None
-
-
-def format_ld_date(value: datetime.datetime) -> str:
-    # We chop the timestamp to be identical to the timestamps returned by
-    # Mastodon's API, because some clients like Toot! (for iOS) are especially
-    # picky about timestamp parsing.
-    return f"{value.strftime(DATETIME_MS_FORMAT)[:-4]}Z"
-
-
-def parse_ld_date(value: str | None) -> datetime.datetime | None:
-    if value is None:
-        return None
-    return parser.isoparse(value).replace(microsecond=0)
