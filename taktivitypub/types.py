@@ -18,6 +18,12 @@ def validate_list_or_single(value):
     return value
 
 
+def validate_iri_or_object(value):
+    if isinstance(value, dict):
+        return value["id"]
+    return value
+
+
 def serialize_datetime(value: datetime.datetime) -> str:
     return value.strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -26,3 +32,4 @@ IRI = Annotated[str, AfterValidator(validate_iri)]
 IRIOrPublic = IRI | Literal["as:Public"]
 ListOrSingle = Annotated[list[T], BeforeValidator(validate_list_or_single)]
 ISODatetime = Annotated[datetime.datetime, PlainSerializer(serialize_datetime)]
+IRIOrObject = Annotated[str, BeforeValidator(validate_iri_or_object)]

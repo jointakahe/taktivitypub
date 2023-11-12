@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1",
+    {
+      "Curve25519Key": "toot:Curve25519Key",
+      "Device": "toot:Device",
+      "Ed25519Key": "toot:Ed25519Key",
+      "Ed25519Signature": "toot:Ed25519Signature",
+      "EncryptedMessage": "toot:EncryptedMessage",
+      "PropertyValue": "schema:PropertyValue",
+      "alsoKnownAs": {
+        "@id": "as:alsoKnownAs",
+        "@type": "@id"
+      },
+      "cipherText": "toot:cipherText",
+      "claim": {
+        "@id": "toot:claim",
+        "@type": "@id"
+      },
+      "deviceId": "toot:deviceId",
+      "devices": {
+        "@id": "toot:devices",
+        "@type": "@id"
+      },
+      "discoverable": "toot:discoverable",
+      "featured": {
+        "@id": "toot:featured",
+        "@type": "@id"
+      },
+      "featuredTags": {
+        "@id": "toot:featuredTags",
+        "@type": "@id"
+      },
+      "fingerprintKey": {
+        "@id": "toot:fingerprintKey",
+        "@type": "@id"
+      },
+      "focalPoint": {
+        "@container": "@list",
+        "@id": "toot:focalPoint"
+      },
+      "identityKey": {
+        "@id": "toot:identityKey",
+        "@type": "@id"
+      },
+      "indexable": "toot:indexable",
+      "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
+      "memorial": "toot:memorial",
+      "messageFranking": "toot:messageFranking",
+      "messageType": "toot:messageType",
+      "movedTo": {
+        "@id": "as:movedTo",
+        "@type": "@id"
+      },
+      "publicKeyBase64": "toot:publicKeyBase64",
+      "schema": "http://schema.org#",
+      "suspended": "toot:suspended",
+      "toot": "http://joinmastodon.org/ns#",
+      "value": "schema:value"
+    }
+  ],
+  "attachment": [
+    {
+      "name": "Homepage",
+      "type": "PropertyValue",
+      "value": "<a href=\"https://aeracode.org\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">aeracode.org</span><span class=\"invisible\"></span></a>"
+    },
+    {
+      "name": "Location",
+      "type": "PropertyValue",
+      "value": "Denver, Colorado, USA"
+    },
+    {
+      "name": "Pronouns",
+      "type": "PropertyValue",
+      "value": "He/Him/They"
+    }
+  ],
+  "devices": "https://fedi.aeracode.org/users/andrew/collections/devices",
+  "discoverable": true,
+  "endpoints": {
+    "sharedInbox": "https://fedi.aeracode.org/inbox"
+  },
+  "featured": "https://fedi.aeracode.org/users/andrew/collections/featured",
+  "featuredTags": "https://fedi.aeracode.org/users/andrew/collections/tags",
+  "followers": "https://fedi.aeracode.org/users/andrew/followers",
+  "following": "https://fedi.aeracode.org/users/andrew/following",
+  "icon": {
+    "mediaType": "image/jpeg",
+    "type": "Image",
+    "url": "https://cdn.masto.host/fediaeracodeorg/accounts/avatars/109/241/267/663/698/911/original/9be0a542d22f0f25.jpg"
+  },
+  "id": "https://fedi.aeracode.org/users/andrew",
+  "image": {
+    "mediaType": "image/jpeg",
+    "type": "Image",
+    "url": "https://cdn.masto.host/fediaeracodeorg/accounts/headers/109/241/267/663/698/911/original/1eb0fb17c80333ad.jpg"
+  },
+  "inbox": "https://fedi.aeracode.org/users/andrew/inbox",
+  "indexable": true,
+  "manuallyApprovesFollowers": false,
+  "memorial": false,
+  "name": "Andrew Godwin",
+  "outbox": "https://fedi.aeracode.org/users/andrew/outbox",
+  "preferredUsername": "andrew",
+  "publicKey": {
+    "id": "https://fedi.aeracode.org/users/andrew#main-key",
+    "owner": "https://fedi.aeracode.org/users/andrew",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4nAvTzR0TQ1UEgmgORMH\nXEWVFFo1SQr6YDuVsELUf4J+Au1EgoQx1NTtbiGc9busnf+yovNpRrJVuS+T2HGr\neESkNjWJ38Nb958gbOxYUHmIF9M6aMoPpS3750MLsQquf8/7UOOfvORUMLgbt/cn\n0VXEtLZHyV/jrI/NdgqTlpP3LwkeKcyCOSxzsP6XyZ1Bz+4sjckSQa1kAVWea1QD\nwNVMMkF5StevbTzYqGaWMUmY5J8YszQdKrJ3Sre0XKl/RwYbQEvhyMYUGSjmj/Dv\naTOyD1zanhJtfaxfYVXeBSaLOq2qyE5YkKfBTlonHxltT30qAx9deYYRMxiSEC0W\nIQIDAQAB\n-----END PUBLIC KEY-----\n"
+  },
+  "published": "2022-10-27T00:00:00Z",
+  "summary": "<p>Django/Python developer, speaker, pilot, and misplaced Brit. Main developer of <span class=\"h-card\" translate=\"no\"><a href=\"https://jointakahe.takahe.social/@takahe/\" class=\"u-url mention\">@<span>takahe</span></a></span>. Day job: Principal Engineer at Astronomer.io. \ud83c\udff3\ufe0f\u200d\ud83c\udf08\ud83d\udc09</p>",
+  "tag": [],
+  "type": "Person",
+  "url": "https://fedi.aeracode.org/@andrew"
+}

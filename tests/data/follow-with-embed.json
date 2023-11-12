@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "actor": {
+    "id": "https://fedi.aeracode.org/users/andrew",
+    "inbox": "https://fedi.aeracode.org/users/andrew/inbox",
+    "outbox": "https://fedi.aeracode.org/users/andrew/outbox",
+    "type": "Person"
+  },
+  "id": "https://fedi.aeracode.org/0f479df8-02bc-4314-94c9-400004944282",
+  "object": "https://takahe.social/@admin@takahe.social/",
+  "type": "Follow"
+}

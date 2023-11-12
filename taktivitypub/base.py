@@ -23,6 +23,7 @@ class APObject(pydantic.BaseModel):
         subclass that represents it.
         """
         from taktivitypub.actor import Actor
+        from taktivitypub.follow import Follow
         from taktivitypub.note import Note
 
         # Run it through the canonicaliser to standardise all the keys
@@ -36,9 +37,11 @@ class APObject(pydantic.BaseModel):
         type_name = ObjectType.by_iname(content["type"])
 
         # Work out the class to use based on the type
-        if type_name == ObjectType.Actor:
+        if type_name in [ObjectType.Actor, ObjectType.Person]:
             object_class = Actor
-        if type_name == ObjectType.Note:
+        elif type_name == ObjectType.Follow:
+            object_class = Follow
+        elif type_name == ObjectType.Note:
             object_class = Note
         else:
             raise ActivityPubError(f"Unknown type {type_name}")
