@@ -1,0 +1,32 @@
+[project]
+name = "taktivitypub"
+authors = [
+    {name = "Andrew Godwin", email = "andrew@aeracode.org"},
+]
+description = "An ActivityPub parsing and generation library"
+readme = "README.rst"
+requires-python = ">=3.11"
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pyld==2.0.3",
+    "python-dateutil~=2.8.2",
+    "pydantic~=2.4.2",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "taktivitypub.__version__"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=7.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = [
+    "tests",
+]
