@@ -17,17 +17,15 @@
     }
   ],
   "atomUri": "https://fedi.aeracode.org/users/andrew/statuses/111354066078688049",
-  "attachment": [
-    {
-      "blurhash": "UPFFZ}kCaxxt01j[WBWB9ZaeofWB_2WUNGbH",
-      "height": 2839,
-      "mediaType": "image/jpeg",
-      "name": "A 2U rackmount server with its top cover off. Various electronics are visible inside, and the front drive bays have two caddies and ten empty spaces.",
-      "type": "Document",
-      "url": "https://cdn.masto.host/fediaeracodeorg/media_attachments/files/111/354/062/557/131/802/original/cdc8d0e5a12e4994.jpg",
-      "width": 2922
-    }
-  ],
+  "attachment": {
+    "blurhash": "UPFFZ}kCaxxt01j[WBWB9ZaeofWB_2WUNGbH",
+    "height": 2839,
+    "mediaType": "image/jpeg",
+    "name": "A 2U rackmount server with its top cover off. Various electronics are visible inside, and the front drive bays have two caddies and ten empty spaces.",
+    "type": "Document",
+    "url": "https://cdn.masto.host/fediaeracodeorg/media_attachments/files/111/354/062/557/131/802/original/cdc8d0e5a12e4994.jpg",
+    "width": 2922
+  },
   "attributedTo": "https://fedi.aeracode.org/users/andrew",
   "cc": [
     "https://fedi.aeracode.org/users/andrew/followers"

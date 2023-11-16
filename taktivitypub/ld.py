@@ -655,13 +655,13 @@ def canonicalise(json_data: dict) -> dict:
             {
                 "blurhash": "toot:blurhash",
                 "Emoji": "toot:Emoji",
+                "featured": {"@id": "toot:featured", "@type": "@id"},
                 "focalPoint": {"@container": "@list", "@id": "toot:focalPoint"},
                 "Hashtag": "as:Hashtag",
                 "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
                 "sensitive": "as:sensitive",
                 "toot": "http://joinmastodon.org/ns#",
                 "votersCount": "toot:votersCount",
-                "featured": {"@id": "toot:featured", "@type": "@id"},
             }
         )
 

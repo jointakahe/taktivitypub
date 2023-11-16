@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    {
+      "atomUri": "ostatus:atomUri",
+      "conversation": "ostatus:conversation",
+      "inReplyToAtomUri": "ostatus:inReplyToAtomUri",
+      "ostatus": "http://ostatus.org#",
+      "sensitive": "as:sensitive",
+      "toot": "http://joinmastodon.org/ns#",
+      "votersCount": "toot:votersCount"
+    },
+    "https://w3id.org/security/v1"
+  ],
+  "actor": "https://fedi.aeracode.org/users/testmover",
+  "cc": [],
+  "id": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408/activity",
+  "object": {
+    "atomUri": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408",
+    "attachment": [],
+    "attributedTo": "https://fedi.aeracode.org/users/testmover",
+    "cc": [],
+    "content": "<p>This is a followers-only post!</p>",
+    "contentMap": {
+      "en": "<p>This is a followers-only post!</p>"
+    },
+    "conversation": "tag:aeracode.org,2023-07-22:objectId=252393:objectType=Conversation",
+    "id": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408",
+    "published": "2023-07-22T16:11:13Z",
+    "replies": {
+      "first": {
+        "items": [],
+        "next": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408/replies?only_other_accounts=true&page=true",
+        "partOf": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408/replies",
+        "type": "CollectionPage"
+      },
+      "id": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408/replies",
+      "type": "Collection"
+    },
+    "sensitive": false,
+    "tag": [],
+    "to": "https://fedi.aeracode.org/users/testmover/followers",
+    "type": "Note",
+    "url": "https://fedi.aeracode.org/@testmover/110758610463118408"
+  },
+  "published": "2023-07-22T16:11:13Z",
+  "to": "https://fedi.aeracode.org/users/testmover/followers",
+  "type": "Create"
+}

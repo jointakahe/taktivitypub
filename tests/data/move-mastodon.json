@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1"
+  ],
+  "actor": "https://fedi.aeracode.org/users/testmover",
+  "id": "https://fedi.aeracode.org/users/testmover#moves/2",
+  "object": "https://fedi.aeracode.org/users/testmover",
+  "target": "https://feditest.aeracode.org/@testuser@feditest.aeracode.org/",
+  "type": "Move"
+}
