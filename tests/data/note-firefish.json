@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1",
+    {
+      "Emoji": "toot:Emoji",
+      "Hashtag": "as:Hashtag",
+      "PropertyValue": "schema:PropertyValue",
+      "_misskey_reaction": "misskey:_misskey_reaction",
+      "_misskey_summary": "misskey:_misskey_summary",
+      "_misskey_talk": "misskey:_misskey_talk",
+      "_misskey_votes": "misskey:_misskey_votes",
+      "discoverable": "toot:discoverable",
+      "featured": "toot:featured",
+      "fedibird": "http://fedibird.com/ns#",
+      "firefish": "https://joinfirefish.org/ns#",
+      "indexable": "toot:indexable",
+      "isCat": "misskey:isCat",
+      "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
+      "misskey": "https://misskey-hub.net/ns#",
+      "movedToUri": "as:movedTo",
+      "quoteUri": "fedibird:quoteUri",
+      "quoteUrl": "as:quoteUrl",
+      "schema": "http://schema.org#",
+      "sensitive": "as:sensitive",
+      "speakAsCat": "firefish:speakAsCat",
+      "toot": "http://joinmastodon.org/ns#",
+      "value": "schema:value",
+      "vcard": "http://www.w3.org/2006/vcard/ns#"
+    }
+  ],
+  "attachment": [
+    {
+      "mediaType": "image/png",
+      "name": "Transit app update: rat detection and reporting for the NYC subway",
+      "type": "Document",
+      "url": "https://storage.serverius.net/ffmedia:social/social/840afe06-038e-4e3a-abc6-6f369e3a5866.png"
+    }
+  ],
+  "attributedTo": "https://firefish.social/users/9aprgabaeb",
+  "cc": [
+    "https://firefish.social/users/9aprgabaeb/followers"
+  ],
+  "content": "<p><span>They added rat mode before we did </span>\ud83d\udc00</p>",
+  "contentMap": {
+    "en": "<p><span>They added rat mode before we did </span>\ud83d\udc00</p>"
+  },
+  "id": "https://firefish.social/notes/9lk05jtqpkfopxis",
+  "inReplyTo": null,
+  "published": "2023-11-02T00:18:08.414Z",
+  "sensitive": false,
+  "source": {
+    "content": "They added rat mode before we did \ud83d\udc00",
+    "mediaType": "text/x.misskeymarkdown"
+  },
+  "summary": null,
+  "tag": [],
+  "to": [
+    "https://www.w3.org/ns/activitystreams#Public"
+  ],
+  "type": "Note"
+}

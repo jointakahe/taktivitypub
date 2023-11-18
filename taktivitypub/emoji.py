@@ -24,7 +24,7 @@ class Emoji(APObject):
 
     # Optional updated field - lets servers cache the emoji locally and flush
     # them through if it changes
-    updated: ISODatetime | None
+    updated: ISODatetime | None = None
 
     # The actual emoji
     icon: Image

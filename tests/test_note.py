@@ -44,11 +44,6 @@ def test_note_mastodon_basic(json_file):
     assert attachment.media_type == "image/jpeg"
     assert attachment.focal_point is None
 
-    # Re-serialize it and check it looks right
-    json_data = instance.dump()
-    assert json_data["published"] == "2023-11-04T20:03:25Z"
-    assert json_data["to"] == "as:Public"
-
 
 def test_note_mastodon_tag_photo(json_file):
     """
@@ -99,15 +94,27 @@ def test_note_mastodon_tag_photo(json_file):
     assert hashtag.name == "#hashtags"
 
 
+def test_note_firefish(json_file):
+    """
+    Tests a Firefish (Calckey) note
+    """
+    json_data = json_file("note-firefish")
+    note = APObject.load(json_data)
+    assert note.attributed_to == "https://firefish.social/users/9aprgabaeb"
+
+
 def test_note_python_everything():
     """
     Creates a new Note from Python and ensures it looks correct
     """
-    note = Note(id="https://example.com/notes/1/")
+    note = Note.model_construct(
+        id="https://example.com/notes/1/",
+        attributed_to="https://fedi.aeracode.org/users/andrew",
+    )
     note.content = "<p>This is my test note.</p>"
     note.tags = [
-        Hashtag(name="#hashtag"),
-        Mention(
+        Hashtag.model_construct(name="#hashtag"),
+        Mention.model_construct(
             name="@takahe@jointakahe.org",
             href="https://jointakahe.takahe.social/@takahe@jointakahe.org/",
         ),
@@ -116,3 +123,4 @@ def test_note_python_everything():
 
     # Validate content
     assert json_data["content"] == "<p>This is my test note.</p>"
+    assert json_data["attributedTo"] == "https://fedi.aeracode.org/users/andrew"

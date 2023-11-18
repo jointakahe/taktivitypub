@@ -13,10 +13,15 @@ class Document(APObject):
 
     type: Literal[ObjectType.Document] = ObjectType.Document
 
-    media_type: str = Field("application/octet-stream", alias="mediaType")
-    url: str
-    name: str | None = None
+    # Image-specific extensions
     width: int | None = None
     height: int | None = None
     blurhash: str | None = None
     focal_point: tuple[float, float] | None = Field(None, alias="focalPoint")
+
+    # Ensure media type has a value
+    media_type: str = Field("application/octet-stream", alias="mediaType")
+
+    # This also uses the following fields from Object:
+    # name
+    # url

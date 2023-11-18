@@ -17,8 +17,7 @@ class Hashtag(APObject):
     type: Literal[ObjectType.Hashtag] = ObjectType.Hashtag
 
     # The text of the hashtag with the preceding hash, e.g. "#mosstodon"
-    # TODO: Support nameMap
-    # TODO: Support "tag"/"tagMap" as the attribute, not "name", for kbin
+    # TODO: Support "tag" as the attribute, not "name", for kbin
     name: str
 
     # Link to a timeline of the tag, usually local to the source instance

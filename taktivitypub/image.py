@@ -16,5 +16,8 @@ class Image(APObject):
 
     type: Literal[ObjectType.Image] = ObjectType.Image
 
+    # We want media type to always have a value here
     media_type: str = Field("application/octet-stream", alias="mediaType")
-    url: str
+
+    # This also uses the following fields from Object:
+    # url

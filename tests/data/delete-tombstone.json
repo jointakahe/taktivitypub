@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/security/v1",
+    {
+      "Curve25519Key": "toot:Curve25519Key",
+      "Device": "toot:Device",
+      "Ed25519Key": "toot:Ed25519Key",
+      "Ed25519Signature": "toot:Ed25519Signature",
+      "Emoji": "toot:Emoji",
+      "EncryptedMessage": "toot:EncryptedMessage",
+      "Hashtag": "as:Hashtag",
+      "PropertyValue": "schema:PropertyValue",
+      "alsoKnownAs": {
+        "@id": "as:alsoKnownAs",
+        "@type": "@id"
+      },
+      "atomUri": "ostatus:atomUri",
+      "blurhash": "toot:blurhash",
+      "cipherText": "toot:cipherText",
+      "claim": {
+        "@id": "toot:claim",
+        "@type": "@id"
+      },
+      "conversation": "ostatus:conversation",
+      "deviceId": "toot:deviceId",
+      "devices": {
+        "@id": "toot:devices",
+        "@type": "@id"
+      },
+      "discoverable": "toot:discoverable",
+      "featured": {
+        "@id": "toot:featured",
+        "@type": "@id"
+      },
+      "featuredTags": {
+        "@id": "toot:featuredTags",
+        "@type": "@id"
+      },
+      "fingerprintKey": {
+        "@id": "toot:fingerprintKey",
+        "@type": "@id"
+      },
+      "focalPoint": {
+        "@container": "@list",
+        "@id": "toot:focalPoint"
+      },
+      "identityKey": {
+        "@id": "toot:identityKey",
+        "@type": "@id"
+      },
+      "inReplyToAtomUri": "ostatus:inReplyToAtomUri",
+      "indexable": "toot:indexable",
+      "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
+      "memorial": "toot:memorial",
+      "messageFranking": "toot:messageFranking",
+      "messageType": "toot:messageType",
+      "movedTo": {
+        "@id": "as:movedTo",
+        "@type": "@id"
+      },
+      "ostatus": "http://ostatus.org#",
+      "publicKeyBase64": "toot:publicKeyBase64",
+      "schema": "http://schema.org#",
+      "sensitive": "as:sensitive",
+      "suspended": "toot:suspended",
+      "toot": "http://joinmastodon.org/ns#",
+      "value": "schema:value",
+      "votersCount": "toot:votersCount"
+    },
+    "https://w3id.org/security/v1"
+  ],
+  "actor": "https://fedi.aeracode.org/users/testmover",
+  "id": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408#delete",
+  "object": {
+    "atomUri": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408",
+    "id": "https://fedi.aeracode.org/users/testmover/statuses/110758610463118408",
+    "type": "Tombstone"
+  },
+  "to": "as:Public",
+  "type": "Delete"
+}

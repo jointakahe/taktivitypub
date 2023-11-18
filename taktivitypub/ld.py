@@ -1,7 +1,10 @@
 import logging
 import urllib.parse as urllib_parse
+from typing import TypeVar
 
 from pyld import jsonld
+
+T = TypeVar("T")
 
 schemas = {
     "unknown": {
@@ -658,6 +661,7 @@ def canonicalise(json_data: dict) -> dict:
                 "featured": {"@id": "toot:featured", "@type": "@id"},
                 "focalPoint": {"@container": "@list", "@id": "toot:focalPoint"},
                 "Hashtag": "as:Hashtag",
+                "indexable": "toot:indexable",
                 "manuallyApprovesFollowers": "as:manuallyApprovesFollowers",
                 "sensitive": "as:sensitive",
                 "toot": "http://joinmastodon.org/ns#",
@@ -671,24 +675,14 @@ def canonicalise(json_data: dict) -> dict:
     return jsonld.compact(jsonld.expand(json_data), context)
 
 
-def get_list(container, key) -> list:
+def get_map_value(map: dict[str, T]) -> T | None:
     """
-    Given a JSON-LD value (that can be either a list, or a dict if it's just
-    one item), always returns a list"""
-    if key not in container:
-        return []
-    value = container[key]
-    if not isinstance(value, list):
-        return [value]
-    return value
-
-
-def get_str_or_id(value: str | dict | None, key: str = "id") -> str | None:
+    Retrieves a value from the given nameMap or contentMap
     """
-    Given a value that could be a str or {"id": str}, return the str
-    """
-    if isinstance(value, str):
-        return value
-    elif isinstance(value, dict):
-        return value.get(key)
+    if len(map) == 1:
+        return list(map.values())[0]
+    if "und" in map:
+        return map["und"]
+    if "en" in map:
+        return map["en"]
     return None

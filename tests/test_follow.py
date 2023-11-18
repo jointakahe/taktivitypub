@@ -1,6 +1,5 @@
-from taktivitypub.base import APObject
+from taktivitypub import Actor, APObject, Follow
 from taktivitypub.constants import ObjectType
-from taktivitypub.follow import Follow
 
 
 def test_follow_mastodon(json_file):
@@ -44,5 +43,26 @@ def test_follow_with_embed(json_file):
     # Make sure it came out right on the Python side
     assert isinstance(instance, Follow)
     assert instance.type == ObjectType.Follow
-    assert instance.actor == "https://fedi.aeracode.org/users/andrew"
-    assert instance.object == "https://takahe.social/@admin@takahe.social/"
+    assert instance.actor_iri == "https://fedi.aeracode.org/users/andrew"
+    assert instance.object_iri == "https://takahe.social/@admin@takahe.social/"
+
+
+def test_make_embedded_follow():
+    """
+    Tests that we can correctly construct a follow with one ID and one embedded
+    object.
+    """
+
+    # Build the follow
+    follow = Follow.model_construct()
+    follow.id = "https://example.com/follow/1"
+    follow.actor = Actor.model_construct(id="https://example.com/user/1")
+    follow.object = "https://example.org/user/2"
+    data = follow.dump()
+
+    # Check the output
+    assert data["type"] == "Follow"
+    assert data["id"] == "https://example.com/follow/1"
+    assert data["actor"]["id"] == "https://example.com/user/1"
+    assert data["object"] == "https://example.org/user/2"
+    assert "attachment" not in data

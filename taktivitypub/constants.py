@@ -24,6 +24,7 @@ class ObjectType(enum.StrEnum):
     Person = "Person"
     Reject = "Reject"
     Remove = "Remove"
+    Tombstone = "Tombstone"
     Undo = "Undo"
     Update = "Update"
 
